@@ -10,11 +10,11 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const countLetters = function(str) {
+const letterPositions = function(sentence) {
   const results = {};
   let position = 0;
 
-  for (const item of str) {
+  for (const item of sentence) {
 
     if(item !== " ") {
 
@@ -25,15 +25,15 @@ const countLetters = function(str) {
         results[item] = [position]; 
       }
     }
-    
+
     position += 1;
   }
 
   return results;
 };
 
-console.log(countLetters('Lighthouse Labs'));
+console.log(letterPositions('Lighthouse Labs'));
 
 // TEST CODE
-assertEqual(countLetters("Lighthouse Labs", "Bootcamp"));
+assertEqual(letterPositions("Lighthouse Labs", "Bootcamp"));
 assertEqual(1, 1);
