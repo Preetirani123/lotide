@@ -12,18 +12,27 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(str) {
   const results = {};
+  let position = 0;
 
-  for (const item of str){
-    if(results[item]){
-      results[item] += 1;
-    }else {
-      results[item] = 1;
+  for (const item of str) {
+
+    if(item !== " ") {
+
+      if(results[item]) {
+        results[item].push(position);
+      }
+      else {
+        results[item] = [position]; 
+      }
     }
-
+    
+    position += 1;
   }
+
   return results;
-}
-console.log(countLetters('lighthouse in the house'));
+};
+
+console.log(countLetters('Lighthouse Labs'));
 
 // TEST CODE
 assertEqual(countLetters("Lighthouse Labs", "Bootcamp"));
