@@ -5,7 +5,7 @@ const assertEqual = function(actual, expected) {
   
   else {
     console.log(`Assertion Failed: ${actual} !== ${expected}`);
-  }
+  };
   
 };
 
@@ -32,7 +32,7 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-console.log(letterPositions('Lighthouse Labs'));
+console.log(letterPositions('Lighthouse in the house'));
 
 // TEST CODE
 assertEqual(letterPositions("Lighthouse Labs", "Bootcamp"));
