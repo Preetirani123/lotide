@@ -1,15 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === ${expected}`);
-  }
-  
-  else {
-    console.log(`Assertion Failed: ${actual} !== ${expected}`);
-  };
-  
-};
-
-
 const letterPositions = function(sentence) {
   const results = {};
   let position = 0;
@@ -34,6 +22,5 @@ const letterPositions = function(sentence) {
 
 console.log(letterPositions('Lighthouse in the house'));
 
-// TEST CODE
-assertEqual(letterPositions("Lighthouse Labs", "Bootcamp"));
-assertEqual(1, 1);
+
+module.exports = letterPositions;

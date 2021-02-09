@@ -1,5 +1,5 @@
 x = 12;
-if(true) {
+if (true) {
   x + 2;
   x = 4;
 }
